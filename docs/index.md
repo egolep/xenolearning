@@ -1,16 +1,4 @@
-# Welcome to your Jupyter Book
+# Benenutə, questo è il libro online di Xenolearning
+Se non sai cosa sia, vai [qui][https://www.xenowiki.org/blog-it/Augmented-Intelligence-introduzione-e-dichiarazione-di-intenti-27.html].  
 
-This is a small sample book to give you a feel for how book content is
-structured.
-
-:::{note}
-Here is a note!
-:::
-
-And here is a code block:
-
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.
+Ora possiamo procedere.
