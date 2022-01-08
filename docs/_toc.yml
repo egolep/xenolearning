@@ -4,5 +4,5 @@
 format: jb-book
 root: index
 chapters:
-- file: markdown
-- file: plots
+- file: Intro_to_programming
+- file: Intro_to_ML
