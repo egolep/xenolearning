@@ -1,5 +1,5 @@
 import Pkg
-Pkg.activate(".")
+Pkg.activate("../")
 
 using DataFrames
 using MLJ
@@ -30,25 +30,26 @@ end
 function my_amazing_ML_model(x, y)
     #W = x |> Standardizer() 
     #z = y |> Standardizer() 
-    ŷ = (x, y) |> XGBoost(seed=42)
+    #ŷ = (x, y) |> XGBoost(seed=42)
     #ŷ = ẑ |> inverse_transform(z)
     #ŷ = (x,y) |> KPLSRegressor()
     #train, test = partition(eachindex(y), 0.7, shuffle=true)
-    fit!(ŷ, verbosity=0, force=true)
-    preds = ŷ()
+    m = machine(XGBoost(), table(x), y)
+    fit!(m, verbosity=0) #, verbosity=0, force=true)
+    preds = predict(m)
     error = rms(preds, y)
     @show error
-    return ŷ, error, error/mean(y)
+    return m, error, error/mean(y)
 end
 
 function confront_ML_Gauss(N)
     model([N ;;])[1], sum_first_N_numbers(N)
 end
 
-function plot_data(data, features, target, model, size)
-    p1 = plot(data[!,:N], [data[!,:Sum], model(data[!,[:N]])]);
-    p2 = plot(model(data[!,[:N]]), data[!,:Sum]);
-    plot(p1, p2, layout=(2,1),size=size)
+function plot_data(data, features, target, model)
+    p1 = plot(data[!,:N], [data[!,:Sum], predict(model, data[!,[:N]])]);
+    p2 = plot(predict(model, data[!,[:N]]), data[!,:Sum]);
+    plot(p1, p2, layout=(2,1),size=(1000,500))
 end
 
 
