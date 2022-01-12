@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Episodio 1: intro to Machine Learning (ML) &#8212; Xenolearning</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Intermezzo: breve e schifosa introduzione alla programmazione" href="Intro_to_programming.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Xenolearning</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Benenutə, questo è il libro online di Xenolearning
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro_to_programming.html">
+   <big>
+    <b>
+     Intermezzo: breve e schifosa introduzione alla programmazione
+    </b>
+   </big>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Episodio 1: intro to Machine Learning (ML)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Intro_to_ML.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/egolep/Xenolearning"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/egolep/Xenolearning/issues/new?title=Issue%20on%20page%20%2FIntro_to_ML.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/egolep/Xenolearning/main?urlpath=tree/docs/Intro_to_ML.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#facciamo-un-esempio">
+   Facciamo un esempio:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abbiamo-quindi-scritto-il-nostro-algoritmo">
+   Abbiamo quindi scritto il nostro algoritmo.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#per-un-attimo-non-preoccupiamoci-del-codice-e-della-sintassi">
+   Per un attimo, non preoccupiamoci del codice e della sintassi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#se-vi-sembra-che-vantaggi-e-benefici-abbiano-un-che-di-speculare-beh-e-cosi">
+   Se vi sembra che vantaggi e benefici abbiano un che di speculare… beh, è così
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ma-di-fatto-quanto-e-buona-la-nostra-approssimazione">
+   Ma di fatto, quanto è buona la nostra approssimazione?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#di-nuovo-non-preoccupiamoci-del-codice-e-guardiamo-direttamente-i-grafici">
+   Di nuovo, non preoccupiamoci del codice e guardiamo direttamente i grafici
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bene-chiudiamo-questa-giornata-con-questa-scorpacciata-di-buone-notizie">
+     Bene, chiudiamo questa giornata con questa scorpacciata di buone notizie.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Episodio 1: intro to Machine Learning (ML)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#facciamo-un-esempio">
+   Facciamo un esempio:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abbiamo-quindi-scritto-il-nostro-algoritmo">
+   Abbiamo quindi scritto il nostro algoritmo.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#per-un-attimo-non-preoccupiamoci-del-codice-e-della-sintassi">
+   Per un attimo, non preoccupiamoci del codice e della sintassi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#se-vi-sembra-che-vantaggi-e-benefici-abbiano-un-che-di-speculare-beh-e-cosi">
+   Se vi sembra che vantaggi e benefici abbiano un che di speculare… beh, è così
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ma-di-fatto-quanto-e-buona-la-nostra-approssimazione">
+   Ma di fatto, quanto è buona la nostra approssimazione?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#di-nuovo-non-preoccupiamoci-del-codice-e-guardiamo-direttamente-i-grafici">
+   Di nuovo, non preoccupiamoci del codice e guardiamo direttamente i grafici
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bene-chiudiamo-questa-giornata-con-questa-scorpacciata-di-buone-notizie">
+     Bene, chiudiamo questa giornata con questa scorpacciata di buone notizie.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="episodio-1-intro-to-machine-learning-ml">
+<h1>Episodio 1: intro to Machine Learning (ML)<a class="headerlink" href="#episodio-1-intro-to-machine-learning-ml" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">my_amazing_and_allmighty_ml_model</span><span class="p">,</span> <span class="n">error</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="n">include</span><span class="p">(</span><span class="s">&quot;./support_material/ml_stack.jl&quot;</span><span class="p">);</span>
+<span class="s">&quot;Correctly loaded&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>augmentation = 100
+error = 189.20000558663574
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Green">  Activating</span> project at `~/Projects/CNA/xenolearning`
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Correctly loaded&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Il ML è il grande insieme di tecniche su cui si basa la stragrande maggioranza dell’AI moderna.<br />
+Potremmo tradurre ‘machine learning’ con ‘apprendimento automatico’ (ma, vi prego, non facciamolo mai e usiamolo solo qui per chiarire il concetto). Il grande claim dietro a questo nome è proprio quello di voler creare degli algoritmi che <em>apprendono</em> autonomamente come risolvere un problema anziché essere specificatamente programmati.</p>
+<div class="section" id="facciamo-un-esempio">
+<h2>Facciamo un esempio:<a class="headerlink" href="#facciamo-un-esempio" title="Permalink to this headline">¶</a></h2>
+<p>Vogliamo scrivere un algoritmo che utilizza la formula di Gauss (<a class="reference external" href="https://egolep.github.io/xenolearning/Intro_to_programming.html">Sounds familiar?</a>) per calcolare la somma dei primi N numeri naturali.<br />
+Ricordiamoci il valore della somma dei primi <strong>1000</strong> naturali:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum_first_N_numbers</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500500
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="abbiamo-quindi-scritto-il-nostro-algoritmo">
+<h2>Abbiamo quindi scritto il nostro algoritmo.<a class="headerlink" href="#abbiamo-quindi-scritto-il-nostro-algoritmo" title="Permalink to this headline">¶</a></h2>
+<p>questo non potrà fare che una cosa: calcolare la somma dei primi N numeri naturali</p>
+<p>Lo scopo del ML è, invece, quello di scrivere algoritmi che, una volta “istruiti” (capiremo nel prossimo episodio cosa significhi effettivamente), potranno risolvere qualsiasi problema gli si pari davanti.<br />
+Compreso quello che abbiamo risolto in precedenza:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">my_amazing_and_allmighty_ml_model</span><span class="p">,</span> <span class="p">[</span><span class="mf">1000.0</span><span class="p">;;])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1-element Vector{Float32}:
+ 500463.4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="per-un-attimo-non-preoccupiamoci-del-codice-e-della-sintassi">
+<h2>Per un attimo, non preoccupiamoci del codice e della sintassi<a class="headerlink" href="#per-un-attimo-non-preoccupiamoci-del-codice-e-della-sintassi" title="Permalink to this headline">¶</a></h2>
+<p>Questa riga di codice si limita a prendere un modello di ML appositamente creato e “istruito” e a chiedergli di “predirre” il valore della nostra funzione iniziale per il valore 1000</p>
+<p>Molto vicino ma non esatto, eh?<br />
+Esattamente. E questo è il primo grande punto da tenere a mente, sia quando vediamo un incredibile risultato ottenuto tramite l’AI, sia quando vediamo un fallimento epico: il ML non è uno strumento che lavora cercando di ottenere un risultato ESATTO, bensì uno strumento statistico, ovvero che cerca di trovare una soluzione APPROSSIMATA ma il più simile e vicina possibile alla realtà.</p>
+<p>Questo approccio ha diversi vantaggi:</p>
+<ul class="simple">
+<li><p>Non è necessario conoscere una soluzione (esatta o meno) per un dato problema. Basterà sviluppare un modello che approssimi sufficientemente bene la soluzione</p></li>
+<li><p>Anche se si conosce una soluzione esatta, a volte calcolarla effettivamente è impossibile o il problema è intrinsecamente intrattabile<a class="reference external" href="#note1"><sup>1<sup></a>. Approssimare questa soluzione risulterebbe sicuramente molto più veloce</p></li>
+<li><p><a class="reference external" href="https://egolep.github.io/xenolearning/Intro_to_programming.html">Tutto è approssimabile</a>, quindi in linea di principio è possibile utilizzare l’AI per risolvere (sempre tramite approssimazione) qualsiasi problema</p></li>
+</ul>
+<p>Un altro vantaggio, se non il più grande, è stato già evidenziato in precedenza: siccome non stiamo ricercando una soluzione specifica di un problema, ma una sua approssimazione, è possibile usare lo stesso algoritmo per risolvere diversi problemi, dovendo “solamente” cambiare il processo di “insegnamento”.</p>
+<p>Ovviamente, come sempre nella vita, ci sono anche degli svantaggi:</p>
+<ul class="simple">
+<li><p>Il primo, già visto: si può ottenere una approssimazione anche molto accurata, ma è impossibile ottenere una soluzione esatta</p></li>
+<li><p>In base a quanto è complesso il problema da risolvere, la fase di “addestramento” può essere anche parecchio dispendiosa e complicata</p></li>
+<li><p>Come conseguenza, è possibile che approssimare la soluzione di un dato problema sia talmente complesso e richieda talmente tante risorse da risultare di fatto infattibile</p></li>
+</ul>
+</div>
+<div class="section" id="se-vi-sembra-che-vantaggi-e-benefici-abbiano-un-che-di-speculare-beh-e-cosi">
+<h2>Se vi sembra che vantaggi e benefici abbiano un che di speculare… beh, è così<a class="headerlink" href="#se-vi-sembra-che-vantaggi-e-benefici-abbiano-un-che-di-speculare-beh-e-cosi" title="Permalink to this headline">¶</a></h2>
+<p>Infatti, in base al caso, può essere più vantaggioso utilizzare un forma approssimata e/o il ML, oppure cercare di trovare e utilizzare una soluzione esatta.</p>
+<p>Come sempre, la realtà non è bianca o nera e quindi, soprattutto negli ultimi anni, stanno emergendo tante forme intermedie per cercare di mantenere i vantaggi di entrambi gli approcci, mitigando le rispettive debolezze.</p>
+</div>
+<div class="section" id="ma-di-fatto-quanto-e-buona-la-nostra-approssimazione">
+<h2>Ma di fatto, quanto è buona la nostra approssimazione?<a class="headerlink" href="#ma-di-fatto-quanto-e-buona-la-nostra-approssimazione" title="Permalink to this headline">¶</a></h2>
+<p>Possiamo provare a vederlo rapidamente con un grafico<a class="reference external" href="#note2"><sup>2</sup></a> prima di salutarci.<br />
+Nel prossimo episodio, vedremo nel dettaglio tutto il codice che abbiamo usato in questa puntata. In quello successivo, inizieremo a discutere più approfonditamente di come capire la qualità della nostra approssimazione.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">my_amazing_and_almighty_ml_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Intro_to_ML_21_0.svg" src="_images/Intro_to_ML_21_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="di-nuovo-non-preoccupiamoci-del-codice-e-guardiamo-direttamente-i-grafici">
+<h2>Di nuovo, non preoccupiamoci del codice e guardiamo direttamente i grafici<a class="headerlink" href="#di-nuovo-non-preoccupiamoci-del-codice-e-guardiamo-direttamente-i-grafici" title="Permalink to this headline">¶</a></h2>
+<p>Nel primo, possiamo vedere la relazione fra il nostro <code class="docutils literal notranslate"><span class="pre">N</span></code> e il valore della somma dei primi <code class="docutils literal notranslate"><span class="pre">N</span></code> numeri (in <font color="lightblue">blu</font>) e la relazione fra <code class="docutils literal notranslate"><span class="pre">N</span></code> e il valore predetto dal modello di ML (in <font color="orange">arancione</font>).<br />
+Come? Vedi solo una linea? Beh, in realtà è una buona notizia: significa che le due linee sono praticamente sovrapposte e quindi il nostro modello predice molto accuratamente il valore che ci interessa.</p>
+<p>Nel secondo, invece, possiamo vedere la relazione fra il valore effettivo (calcolato esplicitamente) e quello predetto dal modello.<br />
+Siccome il risultato è una linea retta che “taglia” a metà il grafico sulla diagonale <span class="math notranslate nohighlight">\(x = y\)</span>, possiamo concludere nuovamente che il nostro modello predice molto accuratamente il valore di nostro interesse.</p>
+<div class="section" id="bene-chiudiamo-questa-giornata-con-questa-scorpacciata-di-buone-notizie">
+<h3>Bene, chiudiamo questa giornata con questa scorpacciata di buone notizie.<a class="headerlink" href="#bene-chiudiamo-questa-giornata-con-questa-scorpacciata-di-buone-notizie" title="Permalink to this headline">¶</a></h3>
+<p>Nel prossimo, come già detto, cominceremo a vedere nello specifico cosa abbiamo fatto (e scopriremo anche che, in realtà, il nostro modello fa un po’ schifo).</p>
+<p>Oggi, mi importava far passare il concetto principale di tutta la disciplina, ovvero quello dell’approssimazione. Nel futuro, vedremo altre conseguenze di questa scelta e capiremo nello specifico cosa significhi approssimare in questo contesto (ovvero: impareremo ad ~~odiare~~ amare la statistica).<br />
+Spero di esserci riuscito. Alla prossima!</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><a id="note1">[1]</a>: per intrattabile si intende un problema per cui una soluzione esatta esiste ed è nota, ma le risorse necessarie per calcolarla (tempo, memoria) sono irragionevoli. Ad esempio, potremmo conoscere una soluzione per uno specifico problema, ma per calcolarla potrebbero servire mille anni. Va da sé che, per molti aspetti, questo è equivalente a non avere una soluzione.</p>
+<p><a id="note2">[2]</a>: abituiamoci a vederne tanti, sia perché sono un ottimo modo per comunicare visualmente concetti complessi, sia perché permettono di indagare in maniera più rapida alcuni fenomeni.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.7"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.7",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.7'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Intro_to_programming.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><big><b>Intermezzo: breve e schifosa introduzione alla programmazione</b></big></p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Egolep<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

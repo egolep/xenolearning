@@ -1,0 +1,1386 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intermezzo: breve e schifosa introduzione alla programmazione &#8212; Xenolearning</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Episodio 1: intro to Machine Learning (ML)" href="Intro_to_ML.html" />
+    <link rel="prev" title="Benenutə, questo è il libro online di Xenolearning" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Xenolearning</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Benenutə, questo è il libro online di Xenolearning
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <big>
+    <b>
+     Intermezzo: breve e schifosa introduzione alla programmazione
+    </b>
+   </big>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Intro_to_ML.html">
+   Episodio 1: intro to Machine Learning (ML)
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Intro_to_programming.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/egolep/Xenolearning"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/egolep/Xenolearning/issues/new?title=Issue%20on%20page%20%2FIntro_to_programming.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/egolep/Xenolearning/main?urlpath=tree/docs/Intro_to_programming.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <big>
+    <b>
+     Intermezzo: breve e schifosa introduzione alla programmazione
+    </b>
+   </big>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b-capitolo-1-b-basi-e-if">
+   <b>
+    Capitolo 1
+   </b>
+   : basi e
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-gia-successa-un-sacco-di-roba">
+     È già successa un sacco di roba.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-riga-precedente-serve-per-creare-una-b-variabile-b">
+       La riga precedente serve per creare una
+       <b>
+        variabile
+       </b>
+       .
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#in-questa-riga-abbiamo-usato-il-nostro-primo-comando-println">
+       In questa riga abbiamo usato il nostro primo comando,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         println
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ovviamente-una-variabile-puo-essere-modificata-dopo-essere-stata-creata">
+       Ovviamente, una variabile può essere modificata dopo essere stata creata.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#qui-possiamo-quasi-leggere-in-inglese">
+       Qui possiamo quasi leggere “in inglese”:
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#se-fucks-given-e-piu-grande-di-zero-allora-chiama-println-che-vita-di-merda">
+         “Se fucks_given è più grande di zero”, allora chiama
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           println("Che
+          </span>
+          <span class="pre">
+           vita
+          </span>
+          <span class="pre">
+           di
+          </span>
+          <span class="pre">
+           merda")
+          </span>
+         </code>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#possiamo-capirne-il-senso-ragionando-come-nel-caso-piu-semplice-di-prima">
+       Possiamo capirne il senso ragionando come nel caso più semplice di prima:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#possiamo-leggere-il-tutto-in-linguaggio-naturale-come">
+       Possiamo leggere il tutto in linguaggio naturale come:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#possiamo-verificare-questo-comportamento-cambiando-manualmente-il-valore-di-fucks-given">
+       Possiamo verificare questo comportamento cambiando manualmente il valore di
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         fucks_given
+        </span>
+       </code>
+       .
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#re-impostiamo-manualmente-fucks-given-a-3-per-rimanere-coerenti-con-le-condizioni-del-codice-iniziale">
+       Re-impostiamo manualmente
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         fucks_given
+        </span>
+       </code>
+       a 3 per rimanere coerenti con le condizioni del codice iniziale
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#procediamo">
+       Procediamo:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#il-simbolo-corrisponde-all-operazione-di-elevanto-a-potenza">
+       Il simbolo
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ^
+        </span>
+       </code>
+       corrisponde all’operazione di elevanto a potenza:
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#applicato-alle-stringhe-ovvero-le-sequenze-di-caratteri-come-appunto-mannaggia-resistituisce-una-nuova-stringa-uguale-alla-prima-ripetuta-un-numero-di-volte-parti-all-esponente-nel-nostro-caso-fucks-given-che-e-uguale-a-3">
+         Applicato alle stringhe (ovvero le sequenze di caratteri come, appunto
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           "Mannaggia"
+          </span>
+         </code>
+         ) resistituisce una nuova stringa uguale alla prima “ripetuta” un numero di volte parti all’esponente (nel nostro caso
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           fucks_given
+          </span>
+         </code>
+         , che è uguale a 3)
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#l-ultima-cosa-ancora-da-spiegare-sono-tutte-quelle-frasi-che-seguono-gli-in-giro-per-il-nostro-codice-che-non-sembrano-avere-alcun-effetto">
+       L’ultima cosa ancora da spiegare sono tutte quelle frasi che seguono gli
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         #
+        </span>
+       </code>
+       in giro per il nostro codice che non sembrano avere alcun effetto.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b-capitolo-2-b-cicli-for">
+   <b>
+    Capitolo 2
+   </b>
+   : cicli (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   )
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pensiamo-al-seguente-caso-ci-viene-chiesta-la-somma-dei-primi-1000-numeri">
+     Pensiamo al seguente caso: ci viene chiesta la somma dei primi 1000 numeri.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vediamo-i-vari-pezzi">
+     Vediamo i vari pezzi:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abbiamo-quindi-ottenuto-un-risultato-500500-come-possiamo-verificare-di-aver-fatto-bene">
+     Abbiamo quindi ottenuto un risultato,
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       500500
+      </span>
+     </code>
+     . Come possiamo verificare di aver fatto bene?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fortunatamente-siamo-abili-matematic-e-quindi-conosciamo-una-formula-che-ci-permette-di-calcolare-lo-stesso-risultato">
+       Fortunatamente, siamo abili matematicə e quindi conosciamo una formula
+       <span class="math notranslate nohighlight">
+        \(^*\)
+       </span>
+       che ci permette di calcolare lo stesso risultato:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#possiamo-facilmente-tradurla-in-codice">
+     Possiamo facilmente tradurla in codice:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#e-con-grande-giubilo-notiamo-che-e-lo-stesso-risultato-ottenuto-con-la-prima-soluzione-vittoria">
+       E con grande giubilo notiamo che è lo stesso risultato ottenuto con la prima soluzione. Vittoria!
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abbiamo-quindi-scoperto-come-ripetere-una-serie-di-operazioni-tante-volte-scrivendo-il-tutto-una-sola-volta">
+     Abbiamo quindi scoperto come ripetere una serie di operazioni tante volte scrivendo il tutto una sola volta.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#e-se-volessimo-ripetere-le-stesse-istruzioni-tante-volte-su-input-diversi">
+       E se volessimo ripetere le stesse istruzioni, tante volte, su input diversi?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b-capitolo-3-b-funzioni">
+   <b>
+    Capitolo 3
+   </b>
+   : funzioni
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#se-adesso-ci-venisse-chiesto-di-applicare-l-algoritmo-precedente-a-tanti-n-diversi-ovvero-di-avere-la-somma-dei-primi-10-poi-100-poi-1000-e-poi-10000-numeri-dovremmo-riscrivere-ogni-volta-un-ciclo-diverso">
+     Se adesso ci venisse chiesto di applicare l’algoritmo precedente a tanti N diversi, ovvero di avere la somma dei primi 10, poi 100, poi 1000 e poi 10000 numeri? Dovremmo riscrivere ogni volta un ciclo diverso?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#come-al-solito-la-pigrizia-e-la-nostra-migliore-consigliera-e-quindi-abbiamo-gia-una-soluzione-le-i-funzioni-i">
+       Come al solito, la pigrizia è la nostra migliore consigliera e quindi abbiamo già una soluzione: le
+       <i>
+        funzioni
+       </i>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abbiamo-appena-definito-due-i-funzioni-i">
+     Abbiamo appena definito due
+     <i>
+      funzioni
+     </i>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bene-in-entrambi-i-casi-otteniamo-lo-stesso-risultato-ottenuto-in-precedenza">
+     Bene, in entrambi i casi otteniamo lo stesso risultato ottenuto in precedenza.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quello-che-possiamo-fare-a-questo-punto-e-richiamare-le-funzioni-su-diversi-valori-e-ottenere-senza-dover-riscrivere-l-intero-codice-il-risultato-corrispondente">
+       Quello che possiamo fare, a questo punto, è richiamare le funzioni su diversi valori e ottenere, senza dover riscrivere l’intero codice, il risultato corrispondente:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-la-nostra-pigrizia-e-stata-soddisfatta">
+     E la nostra pigrizia è stata soddisfatta
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-questo-conclude-la-nostra-introduzione-alla-programmazione">
+     E questo conclude la nostra introduzione alla programmazione.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ci-sono-molti-altri-concetti-che-si-serviranno-lungo-il-percorso-ma-credo-sia-meglio-introdurli-via-via-quando-ci-serviranno">
+       Ci sono molti altri concetti che si serviranno lungo il percorso, ma credo sia meglio introdurli via via quando ci serviranno.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><big><b>Intermezzo: breve e schifosa introduzione alla programmazione</b></big></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   <big>
+    <b>
+     Intermezzo: breve e schifosa introduzione alla programmazione
+    </b>
+   </big>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b-capitolo-1-b-basi-e-if">
+   <b>
+    Capitolo 1
+   </b>
+   : basi e
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-gia-successa-un-sacco-di-roba">
+     È già successa un sacco di roba.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-riga-precedente-serve-per-creare-una-b-variabile-b">
+       La riga precedente serve per creare una
+       <b>
+        variabile
+       </b>
+       .
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#in-questa-riga-abbiamo-usato-il-nostro-primo-comando-println">
+       In questa riga abbiamo usato il nostro primo comando,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         println
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ovviamente-una-variabile-puo-essere-modificata-dopo-essere-stata-creata">
+       Ovviamente, una variabile può essere modificata dopo essere stata creata.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#qui-possiamo-quasi-leggere-in-inglese">
+       Qui possiamo quasi leggere “in inglese”:
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#se-fucks-given-e-piu-grande-di-zero-allora-chiama-println-che-vita-di-merda">
+         “Se fucks_given è più grande di zero”, allora chiama
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           println("Che
+          </span>
+          <span class="pre">
+           vita
+          </span>
+          <span class="pre">
+           di
+          </span>
+          <span class="pre">
+           merda")
+          </span>
+         </code>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#possiamo-capirne-il-senso-ragionando-come-nel-caso-piu-semplice-di-prima">
+       Possiamo capirne il senso ragionando come nel caso più semplice di prima:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#possiamo-leggere-il-tutto-in-linguaggio-naturale-come">
+       Possiamo leggere il tutto in linguaggio naturale come:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#possiamo-verificare-questo-comportamento-cambiando-manualmente-il-valore-di-fucks-given">
+       Possiamo verificare questo comportamento cambiando manualmente il valore di
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         fucks_given
+        </span>
+       </code>
+       .
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#re-impostiamo-manualmente-fucks-given-a-3-per-rimanere-coerenti-con-le-condizioni-del-codice-iniziale">
+       Re-impostiamo manualmente
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         fucks_given
+        </span>
+       </code>
+       a 3 per rimanere coerenti con le condizioni del codice iniziale
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#procediamo">
+       Procediamo:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#il-simbolo-corrisponde-all-operazione-di-elevanto-a-potenza">
+       Il simbolo
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ^
+        </span>
+       </code>
+       corrisponde all’operazione di elevanto a potenza:
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#applicato-alle-stringhe-ovvero-le-sequenze-di-caratteri-come-appunto-mannaggia-resistituisce-una-nuova-stringa-uguale-alla-prima-ripetuta-un-numero-di-volte-parti-all-esponente-nel-nostro-caso-fucks-given-che-e-uguale-a-3">
+         Applicato alle stringhe (ovvero le sequenze di caratteri come, appunto
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           "Mannaggia"
+          </span>
+         </code>
+         ) resistituisce una nuova stringa uguale alla prima “ripetuta” un numero di volte parti all’esponente (nel nostro caso
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           fucks_given
+          </span>
+         </code>
+         , che è uguale a 3)
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#l-ultima-cosa-ancora-da-spiegare-sono-tutte-quelle-frasi-che-seguono-gli-in-giro-per-il-nostro-codice-che-non-sembrano-avere-alcun-effetto">
+       L’ultima cosa ancora da spiegare sono tutte quelle frasi che seguono gli
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         #
+        </span>
+       </code>
+       in giro per il nostro codice che non sembrano avere alcun effetto.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b-capitolo-2-b-cicli-for">
+   <b>
+    Capitolo 2
+   </b>
+   : cicli (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   )
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pensiamo-al-seguente-caso-ci-viene-chiesta-la-somma-dei-primi-1000-numeri">
+     Pensiamo al seguente caso: ci viene chiesta la somma dei primi 1000 numeri.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vediamo-i-vari-pezzi">
+     Vediamo i vari pezzi:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abbiamo-quindi-ottenuto-un-risultato-500500-come-possiamo-verificare-di-aver-fatto-bene">
+     Abbiamo quindi ottenuto un risultato,
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       500500
+      </span>
+     </code>
+     . Come possiamo verificare di aver fatto bene?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fortunatamente-siamo-abili-matematic-e-quindi-conosciamo-una-formula-che-ci-permette-di-calcolare-lo-stesso-risultato">
+       Fortunatamente, siamo abili matematicə e quindi conosciamo una formula
+       <span class="math notranslate nohighlight">
+        \(^*\)
+       </span>
+       che ci permette di calcolare lo stesso risultato:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#possiamo-facilmente-tradurla-in-codice">
+     Possiamo facilmente tradurla in codice:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#e-con-grande-giubilo-notiamo-che-e-lo-stesso-risultato-ottenuto-con-la-prima-soluzione-vittoria">
+       E con grande giubilo notiamo che è lo stesso risultato ottenuto con la prima soluzione. Vittoria!
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abbiamo-quindi-scoperto-come-ripetere-una-serie-di-operazioni-tante-volte-scrivendo-il-tutto-una-sola-volta">
+     Abbiamo quindi scoperto come ripetere una serie di operazioni tante volte scrivendo il tutto una sola volta.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#e-se-volessimo-ripetere-le-stesse-istruzioni-tante-volte-su-input-diversi">
+       E se volessimo ripetere le stesse istruzioni, tante volte, su input diversi?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#b-capitolo-3-b-funzioni">
+   <b>
+    Capitolo 3
+   </b>
+   : funzioni
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#se-adesso-ci-venisse-chiesto-di-applicare-l-algoritmo-precedente-a-tanti-n-diversi-ovvero-di-avere-la-somma-dei-primi-10-poi-100-poi-1000-e-poi-10000-numeri-dovremmo-riscrivere-ogni-volta-un-ciclo-diverso">
+     Se adesso ci venisse chiesto di applicare l’algoritmo precedente a tanti N diversi, ovvero di avere la somma dei primi 10, poi 100, poi 1000 e poi 10000 numeri? Dovremmo riscrivere ogni volta un ciclo diverso?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#come-al-solito-la-pigrizia-e-la-nostra-migliore-consigliera-e-quindi-abbiamo-gia-una-soluzione-le-i-funzioni-i">
+       Come al solito, la pigrizia è la nostra migliore consigliera e quindi abbiamo già una soluzione: le
+       <i>
+        funzioni
+       </i>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abbiamo-appena-definito-due-i-funzioni-i">
+     Abbiamo appena definito due
+     <i>
+      funzioni
+     </i>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bene-in-entrambi-i-casi-otteniamo-lo-stesso-risultato-ottenuto-in-precedenza">
+     Bene, in entrambi i casi otteniamo lo stesso risultato ottenuto in precedenza.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quello-che-possiamo-fare-a-questo-punto-e-richiamare-le-funzioni-su-diversi-valori-e-ottenere-senza-dover-riscrivere-l-intero-codice-il-risultato-corrispondente">
+       Quello che possiamo fare, a questo punto, è richiamare le funzioni su diversi valori e ottenere, senza dover riscrivere l’intero codice, il risultato corrispondente:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-la-nostra-pigrizia-e-stata-soddisfatta">
+     E la nostra pigrizia è stata soddisfatta
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-questo-conclude-la-nostra-introduzione-alla-programmazione">
+     E questo conclude la nostra introduzione alla programmazione.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ci-sono-molti-altri-concetti-che-si-serviranno-lungo-il-percorso-ma-credo-sia-meglio-introdurli-via-via-quando-ci-serviranno">
+       Ci sono molti altri concetti che si serviranno lungo il percorso, ma credo sia meglio introdurli via via quando ci serviranno.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="big-b-intermezzo-breve-e-schifosa-introduzione-alla-programmazione-b-big">
+<h1><big><b>Intermezzo: breve e schifosa introduzione alla programmazione</b></big><a class="headerlink" href="#big-b-intermezzo-breve-e-schifosa-introduzione-alla-programmazione-b-big" title="Permalink to this headline">¶</a></h1>
+<p>ovvero: intanto vi faccio vedere quello che normalmente si fa in un semestre universitario in 10 minuti</p>
+<p>ovvero: nessunə capirà un cazzo</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="b-capitolo-1-b-basi-e-if">
+<h1><b>Capitolo 1</b>: basi e <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#b-capitolo-1-b-basi-e-if" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">fucks_given</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">println</span><span class="p">(</span><span class="n">fucks_given</span><span class="p">)</span>
+
+<span class="c"># arriva la bolletta dell&#39;acqua: 150 bombe</span>
+<span class="n">fucks_given</span> <span class="o">=</span> <span class="n">fucks_given</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c"># arriva anche la TARI: due rate da 137 euro</span>
+<span class="n">fucks_given</span> <span class="o">+=</span> <span class="mi">2</span>
+
+<span class="k">if</span> <span class="n">fucks_given</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Che vita di merda&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="n">curses_amount</span> <span class="o">=</span> <span class="s">&quot;Mannaggia &quot;</span> <span class="o">^</span> <span class="n">fucks_given</span>
+<span class="n">println</span><span class="p">(</span><span class="n">curses_amount</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+Che vita di merda
+Mannaggia Mannaggia Mannaggia 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="e-gia-successa-un-sacco-di-roba">
+<h2>È già successa un sacco di roba.<a class="headerlink" href="#e-gia-successa-un-sacco-di-roba" title="Permalink to this headline">¶</a></h2>
+<p>Ripercorriamo i vari passaggi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">fucks_given</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="la-riga-precedente-serve-per-creare-una-b-variabile-b">
+<h3>La riga precedente serve per creare una <b>variabile</b>.<a class="headerlink" href="#la-riga-precedente-serve-per-creare-una-b-variabile-b" title="Permalink to this headline">¶</a></h3>
+<p>È più o meno lo stesso concetto che si usa in matematica: scelgo un nome arbitrario (ma, possibilmente, che abbia senso rispetto allo scopo per cui verrà usata la variabile) e gli assegno un determinato valore.<br />
+Quindi noi abbiamo creato una variabile chiamata fucks_given e le abbiamo assegnato il valore 0</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="n">fucks_given</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="in-questa-riga-abbiamo-usato-il-nostro-primo-comando-println">
+<h3>In questa riga abbiamo usato il nostro primo comando, <code class="docutils literal notranslate"><span class="pre">println</span></code><a class="headerlink" href="#in-questa-riga-abbiamo-usato-il-nostro-primo-comando-println" title="Permalink to this headline">¶</a></h3>
+<p>Questo viene utilizzato, come suggerisce il nome, per stampare quello che viene scritto fra le parentesi (in gergo: il parametro che viene passato).<br />
+Capiremo meglio tutto questo andando avanti, per ora limitiamoci a pensare che se vogliamo stampare il risultato di una serie di operazioni, possiamo usare il comando <code class="docutils literal notranslate"><span class="pre">println</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">fucks_given</span> <span class="o">=</span> <span class="n">fucks_given</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">fucks_given</span> <span class="o">+=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ovviamente-una-variabile-puo-essere-modificata-dopo-essere-stata-creata">
+<h3>Ovviamente, una variabile può essere modificata dopo essere stata creata.<a class="headerlink" href="#ovviamente-una-variabile-puo-essere-modificata-dopo-essere-stata-creata" title="Permalink to this headline">¶</a></h3>
+<p>In questo caso, la incrementiamo.<br />
+Le due righe precedenti sono due modi per incrementare il valore di una variabile; il primo più leggibile (letteralmente: il nuovo valore di fucks_given sarà uguale al precedente valore della stessa fucks_given aumentato di 1) il secondo più veloce (fucks_given diventerà sé stesso incrementato di 2)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">fucks_given</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Che vita di merda&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Che vita di merda
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="qui-possiamo-quasi-leggere-in-inglese">
+<h3>Qui possiamo quasi leggere “in inglese”:<a class="headerlink" href="#qui-possiamo-quasi-leggere-in-inglese" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="se-fucks-given-e-piu-grande-di-zero-allora-chiama-println-che-vita-di-merda">
+<h4>“Se fucks_given è più grande di zero”, allora chiama <code class="docutils literal notranslate"><span class="pre">println(&quot;Che</span> <span class="pre">vita</span> <span class="pre">di</span> <span class="pre">merda&quot;)</span></code><a class="headerlink" href="#se-fucks-given-e-piu-grande-di-zero-allora-chiama-println-che-vita-di-merda" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">end</span></code> serve per far capire al computer che è finito il <i>blocco</i> di istruzioni da eseguire se la condizione iniziale (<code class="docutils literal notranslate"><span class="pre">fucks_given</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>) risulta vera.<br />
+Ovviamente, è possibile definire più condizioni alternative e/o una condizione per tutti i casi non specificati esplicitamente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">fucks_given</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Che vita di merda&quot;</span><span class="p">)</span>
+<span class="k">elseif</span> <span class="n">fucks_given</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Viviamo infine nello xenocomunismo... o forse siamo solo ricchƏ?&quot;</span><span class="p">)</span>
+<span class="k">else</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Siamo ascesə al piano superiore&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Che vita di merda
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="possiamo-capirne-il-senso-ragionando-come-nel-caso-piu-semplice-di-prima">
+<h3>Possiamo capirne il senso ragionando come nel caso più semplice di prima:<a class="headerlink" href="#possiamo-capirne-il-senso-ragionando-come-nel-caso-piu-semplice-di-prima" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>la prima riga e il primo blocco sono gli stessi di prima.</p></li>
+<li><p>la seconda condizione, introdotta da <code class="docutils literal notranslate"><span class="pre">elseif</span></code> controlla un caso alternativo al primo e in caso esegue il codice nel rispettivo blocco.</p></li>
+<li><p>infine, la terza condizione viene eseguita ogni volta che nessuna delle prime due è verificata.</p></li>
+</ul>
+</div>
+<div class="section" id="possiamo-leggere-il-tutto-in-linguaggio-naturale-come">
+<h3>Possiamo leggere il tutto in linguaggio naturale come:<a class="headerlink" href="#possiamo-leggere-il-tutto-in-linguaggio-naturale-come" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><font color='fuchsia'><b>se</b></font> fucks_given è maggiore di zero, <font color='fuchsia'><b>allora</b></font> stampa “Che vita di merda”,</p></li>
+<li><p><font color='fuchsia'><b>invece se</b></font> è uguale a 0, <font color='fuchsia'><b>allora</b></font> stampa “Viviamo infine nello xenocomunismo… o forse siamo solo ricchƏ?”,</p></li>
+<li><p><font color='fuchsia'><b>altrimenti</b></font> stampa “Siamo ascesə al piano superiore”</p></li>
+</ul>
+<br>
+</br>
+<p>NB: per verificare che fucks_given sia uguale a 0, non abbiamo usato solo <code class="docutils literal notranslate"><span class="pre">=</span></code> ma <code class="docutils literal notranslate"><span class="pre">==</span></code>. Questo perché, logicamente, assegnare una variabile (<code class="docutils literal notranslate"><span class="pre">=</span></code>) e verificare una uguaglianza (<code class="docutils literal notranslate"><span class="pre">==</span></code>) sono due concetti radicalmente diversi, e quindi necessitano di due simboli diversi</p>
+</div>
+<div class="section" id="possiamo-verificare-questo-comportamento-cambiando-manualmente-il-valore-di-fucks-given">
+<h3>Possiamo verificare questo comportamento cambiando manualmente il valore di <code class="docutils literal notranslate"><span class="pre">fucks_given</span></code>.<a class="headerlink" href="#possiamo-verificare-questo-comportamento-cambiando-manualmente-il-valore-di-fucks-given" title="Permalink to this headline">¶</a></h3>
+<p>Facciamo qualche prova:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">fucks_given</span> <span class="o">=</span> <span class="mi">0</span> <span class="c"># Notiamo nuovamente l&#39;utilizzo di `=` qui...</span>
+
+<span class="k">if</span> <span class="n">fucks_given</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Che vita di merda&quot;</span><span class="p">)</span>
+<span class="k">elseif</span> <span class="n">fucks_given</span> <span class="o">==</span> <span class="mi">0</span> <span class="c"># e l&#39;utilizzo di `==` qui</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Viviamo infine nello xenocomunismo... o forse siamo solo ricchƏ?&quot;</span><span class="p">)</span>
+<span class="k">else</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Siamo ascesə al piano superiore&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Viviamo infine nello xenocomunismo... o forse siamo solo ricchƏ?
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">fucks_given</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="c"># Notiamo nuovamente l&#39;utilizzo di `=` qui...</span>
+
+<span class="k">if</span> <span class="n">fucks_given</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Che vita di merda&quot;</span><span class="p">)</span>
+<span class="k">elseif</span> <span class="n">fucks_given</span> <span class="o">==</span> <span class="mi">0</span> <span class="c"># e l&#39;utilizzo di `==` qui</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Viviamo infine nello xenocomunismo... o forse siamo solo ricchƏ?&quot;</span><span class="p">)</span>
+<span class="k">else</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;Siamo ascesə al piano superiore&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Siamo ascesə al piano superiore
+</pre></div>
+</div>
+</div>
+</div>
+<p>come previsto, nel primo caso otteniamo <code class="docutils literal notranslate"><span class="pre">&quot;Viviamo</span> <span class="pre">infine</span> <span class="pre">nello</span> <span class="pre">xenocomunismo...</span> <span class="pre">o</span> <span class="pre">forse</span> <span class="pre">siamo</span> <span class="pre">solo</span> <span class="pre">ricchƏ?&quot;</span></code> mentre nel secondo <code class="docutils literal notranslate"><span class="pre">&quot;Siamo</span> <span class="pre">ascesə</span> <span class="pre">al</span> <span class="pre">piano</span> <span class="pre">superiore&quot;</span></code></p>
+</div>
+<div class="section" id="re-impostiamo-manualmente-fucks-given-a-3-per-rimanere-coerenti-con-le-condizioni-del-codice-iniziale">
+<h3>Re-impostiamo manualmente <code class="docutils literal notranslate"><span class="pre">fucks_given</span></code> a 3 per rimanere coerenti con le condizioni del codice iniziale<a class="headerlink" href="#re-impostiamo-manualmente-fucks-given-a-3-per-rimanere-coerenti-con-le-condizioni-del-codice-iniziale" title="Permalink to this headline">¶</a></h3>
+<p>(il <code class="docutils literal notranslate"><span class="pre">;</span></code> serve per “sopprimere” l’output, ovvero per non farlo stampare)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">fucks_given</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="procediamo">
+<h3>Procediamo:<a class="headerlink" href="#procediamo" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">curses_amount</span> <span class="o">=</span> <span class="s">&quot;Mannaggia &quot;</span> <span class="o">^</span> <span class="n">fucks_given</span>
+<span class="n">println</span><span class="p">(</span><span class="n">curses_amount</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mannaggia Mannaggia Mannaggia 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="il-simbolo-corrisponde-all-operazione-di-elevanto-a-potenza">
+<h3>Il simbolo <code class="docutils literal notranslate"><span class="pre">^</span></code> corrisponde all’operazione di elevanto a potenza:<a class="headerlink" href="#il-simbolo-corrisponde-all-operazione-di-elevanto-a-potenza" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="mi">3</span><span class="p">)</span> <span class="c"># due alla terza è uguale a 8</span>
+<span class="n">println</span><span class="p">(</span><span class="mi">3</span><span class="o">^</span><span class="mi">4</span><span class="p">)</span> <span class="c"># tre alla quarta è uguale a 81</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+81
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="applicato-alle-stringhe-ovvero-le-sequenze-di-caratteri-come-appunto-mannaggia-resistituisce-una-nuova-stringa-uguale-alla-prima-ripetuta-un-numero-di-volte-parti-all-esponente-nel-nostro-caso-fucks-given-che-e-uguale-a-3">
+<h4>Applicato alle stringhe (ovvero le sequenze di caratteri come, appunto <code class="docutils literal notranslate"><span class="pre">&quot;Mannaggia&quot;</span></code>) resistituisce una nuova stringa uguale alla prima “ripetuta” un numero di volte parti all’esponente (nel nostro caso <code class="docutils literal notranslate"><span class="pre">fucks_given</span></code>, che è uguale a 3)<a class="headerlink" href="#applicato-alle-stringhe-ovvero-le-sequenze-di-caratteri-come-appunto-mannaggia-resistituisce-una-nuova-stringa-uguale-alla-prima-ripetuta-un-numero-di-volte-parti-all-esponente-nel-nostro-caso-fucks-given-che-e-uguale-a-3" title="Permalink to this headline">¶</a></h4>
+<br>
+</br><p>Una piccola nota: nella cella di codice iniziale come in quest’ultima, abbiamo messo <code class="docutils literal notranslate"><span class="pre">println</span></code> per stampare l’ultima istruzione.</p>
+<p>Questo in realtà non è necessario, infatti se facciamo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">curses_amount</span> <span class="o">=</span> <span class="s">&quot;Mannaggia &quot;</span> <span class="o">^</span> <span class="n">fucks_given</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Mannaggia Mannaggia Mannaggia &quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Otteniamo ugualmente l’output desiderato<br />
+Questo non è particolarmente importante, ma siccome fa risparmiare tempo (e io sono pigrə) è possibile che spesso scriverò così e non voglio creare (troppa) confusione.</p>
+</div>
+</div>
+<div class="section" id="l-ultima-cosa-ancora-da-spiegare-sono-tutte-quelle-frasi-che-seguono-gli-in-giro-per-il-nostro-codice-che-non-sembrano-avere-alcun-effetto">
+<h3>L’ultima cosa ancora da spiegare sono tutte quelle frasi che seguono gli <code class="docutils literal notranslate"><span class="pre">#</span></code> in giro per il nostro codice che non sembrano avere alcun effetto.<a class="headerlink" href="#l-ultima-cosa-ancora-da-spiegare-sono-tutte-quelle-frasi-che-seguono-gli-in-giro-per-il-nostro-codice-che-non-sembrano-avere-alcun-effetto" title="Permalink to this headline">¶</a></h3>
+<p>Il carattere <code class="docutils literal notranslate"><span class="pre">#</span></code> simboleggia l’inizio di un <i>commento</i>; lo scopo dei commenti è darci la possibilità di scrivere del testo in mezzo al codice, tendenzialmente per spiegare a cosa servono determinate istruzioni, magari particolarmente importanti ma altrettanto criptiche.<br />
+Un altro uso è quello di non far eseguire determinate righe di codice senza però cancellarle. Questo è particolarmente utile quando qualcosa non funziona e non capiamo perché, quindi magari cominciamo a cancellare e rimettere cose palesemente a caso e quindi non possiamo permetterci di cancellare e riscrivere cose (perché altrimenti dopo 2 minuti non ci ricorderemmo più nulla)</p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="b-capitolo-2-b-cicli-for">
+<h1><b>Capitolo 2</b>: cicli (<code class="docutils literal notranslate"><span class="pre">for</span></code>)<a class="headerlink" href="#b-capitolo-2-b-cicli-for" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pensiamo-al-seguente-caso-ci-viene-chiesta-la-somma-dei-primi-1000-numeri">
+<h2>Pensiamo al seguente caso: ci viene chiesta la somma dei primi 1000 numeri.<a class="headerlink" href="#pensiamo-al-seguente-caso-ci-viene-chiesta-la-somma-dei-primi-1000-numeri" title="Permalink to this headline">¶</a></h2>
+<p>Siccome la pigrizia è un nostro tratto ancestrale, vogliamo automatizzare la cosa invece che fare noi la catena di operazioni (<span class="math notranslate nohighlight">\(1+2+3+4+5+\cdots\)</span>) senza nemmeno perdere tempo a scrivere l’intera somma.<br />
+Esiste un modo per dire al computer di eseguire una serie di operazioni ciclicamente? Ovviamente sì:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">:</span><span class="mi">1000</span>
+    <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span>
+<span class="k">end</span>
+<span class="n">sum</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500500
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="vediamo-i-vari-pezzi">
+<h2>Vediamo i vari pezzi:<a class="headerlink" href="#vediamo-i-vari-pezzi" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">=</span> <span class="pre">0</span></code>: definiamo una variabile in cui salveremo via via le somme</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i=1:1000</span></code>: diciamo al computer di definire una nuova variabile <code class="docutils literal notranslate"><span class="pre">i</span></code> e la facciamo scorrere via via in tutti i valori che vanno da 1 a 1000 (<code class="docutils literal notranslate"><span class="pre">1:1000</span></code> definisce un <i>range</i> numerico che va, appunto, da 1 a 1000)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">+=</span> <span class="pre">i</span></code>: sommiamo, ad ogni iterazione, il valore della variabile <code class="docutils literal notranslate"><span class="pre">i</span></code> (1, 2, 3, …) a <code class="docutils literal notranslate"><span class="pre">sum</span></code></p></li>
+<li><p>Così come per <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code> da inizio ad un blocco di istruzioni che verrà ripetuto ad ogni iterazione, e la fine di tale blocco viene identificato nuovamente alla parola <code class="docutils literal notranslate"><span class="pre">end</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="abbiamo-quindi-ottenuto-un-risultato-500500-come-possiamo-verificare-di-aver-fatto-bene">
+<h2>Abbiamo quindi ottenuto un risultato, <code class="docutils literal notranslate"><span class="pre">500500</span></code>. Come possiamo verificare di aver fatto bene?<a class="headerlink" href="#abbiamo-quindi-ottenuto-un-risultato-500500-come-possiamo-verificare-di-aver-fatto-bene" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fortunatamente-siamo-abili-matematic-e-quindi-conosciamo-una-formula-che-ci-permette-di-calcolare-lo-stesso-risultato">
+<h3>Fortunatamente, siamo abili matematicə e quindi conosciamo una formula<span class="math notranslate nohighlight">\(^*\)</span> che ci permette di calcolare lo stesso risultato:<a class="headerlink" href="#fortunatamente-siamo-abili-matematic-e-quindi-conosciamo-una-formula-che-ci-permette-di-calcolare-lo-stesso-risultato" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[ \sum_{i=1}^Ni = N * (N+1) / 2 \]</div>
+<br> 
+</br>
+<ul class="simple">
+<li><p>Per questa formula possiamo ringraziare il buon Gauss, che leggenda vuole l’abbia ideata a soli 9 anni.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="possiamo-facilmente-tradurla-in-codice">
+<h2>Possiamo facilmente tradurla in codice:<a class="headerlink" href="#possiamo-facilmente-tradurla-in-codice" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">÷</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500500
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="e-con-grande-giubilo-notiamo-che-e-lo-stesso-risultato-ottenuto-con-la-prima-soluzione-vittoria">
+<h3>E con grande giubilo notiamo che è lo stesso risultato ottenuto con la prima soluzione. Vittoria!<a class="headerlink" href="#e-con-grande-giubilo-notiamo-che-e-lo-stesso-risultato-ottenuto-con-la-prima-soluzione-vittoria" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="abbiamo-quindi-scoperto-come-ripetere-una-serie-di-operazioni-tante-volte-scrivendo-il-tutto-una-sola-volta">
+<h2>Abbiamo quindi scoperto come ripetere una serie di operazioni tante volte scrivendo il tutto una sola volta.<a class="headerlink" href="#abbiamo-quindi-scoperto-come-ripetere-una-serie-di-operazioni-tante-volte-scrivendo-il-tutto-una-sola-volta" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="e-se-volessimo-ripetere-le-stesse-istruzioni-tante-volte-su-input-diversi">
+<h3>E se volessimo ripetere le stesse istruzioni, tante volte, su input diversi?<a class="headerlink" href="#e-se-volessimo-ripetere-le-stesse-istruzioni-tante-volte-su-input-diversi" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="b-capitolo-3-b-funzioni">
+<h1><b>Capitolo 3</b>: funzioni<a class="headerlink" href="#b-capitolo-3-b-funzioni" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="se-adesso-ci-venisse-chiesto-di-applicare-l-algoritmo-precedente-a-tanti-n-diversi-ovvero-di-avere-la-somma-dei-primi-10-poi-100-poi-1000-e-poi-10000-numeri-dovremmo-riscrivere-ogni-volta-un-ciclo-diverso">
+<h2>Se adesso ci venisse chiesto di applicare l’algoritmo precedente a tanti N diversi, ovvero di avere la somma dei primi 10, poi 100, poi 1000 e poi 10000 numeri? Dovremmo riscrivere ogni volta un ciclo diverso?<a class="headerlink" href="#se-adesso-ci-venisse-chiesto-di-applicare-l-algoritmo-precedente-a-tanti-n-diversi-ovvero-di-avere-la-somma-dei-primi-10-poi-100-poi-1000-e-poi-10000-numeri-dovremmo-riscrivere-ogni-volta-un-ciclo-diverso" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="come-al-solito-la-pigrizia-e-la-nostra-migliore-consigliera-e-quindi-abbiamo-gia-una-soluzione-le-i-funzioni-i">
+<h3>Come al solito, la pigrizia è la nostra migliore consigliera e quindi abbiamo già una soluzione: le <i>funzioni</i><a class="headerlink" href="#come-al-solito-la-pigrizia-e-la-nostra-migliore-consigliera-e-quindi-abbiamo-gia-una-soluzione-le-i-funzioni-i" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">sum_first_N_numbers</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">÷</span><span class="mi">2</span>
+<span class="k">end</span>
+
+<span class="k">function</span> <span class="n">sum_first_N_numbers_loop</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">:</span><span class="n">N</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">end</span>
+    <span class="n">sum</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sum_first_N_numbers_loop (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="abbiamo-appena-definito-due-i-funzioni-i">
+<h2>Abbiamo appena definito due <i>funzioni</i><a class="headerlink" href="#abbiamo-appena-definito-due-i-funzioni-i" title="Permalink to this headline">¶</a></h2>
+<p>Entrambe necessiteranno di un <i>parametro</i> (<code class="docutils literal notranslate"><span class="pre">N</span></code>) che utilizzeranno poi per fare il calcolo.<br />
+La prima funzione calcolerà la somma dei primi <code class="docutils literal notranslate"><span class="pre">N</span></code> numeri usando la formula di Gauss, mentre la seconda utilizzerà il nostro meccanismo iniziale con il ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
+<p>Vediamo ora come usarle e se otteniamo il risultato ci aspettiamo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum_first_N_numbers</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500500
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum_first_N_numbers_loop</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500500
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bene-in-entrambi-i-casi-otteniamo-lo-stesso-risultato-ottenuto-in-precedenza">
+<h2>Bene, in entrambi i casi otteniamo lo stesso risultato ottenuto in precedenza.<a class="headerlink" href="#bene-in-entrambi-i-casi-otteniamo-lo-stesso-risultato-ottenuto-in-precedenza" title="Permalink to this headline">¶</a></h2>
+<p>Ma cosa sta succedendo? Quando <i>richiamiamo</i> una delle due funzioni, questa prende il parametro che viene passato fra parentesi (nel nostro caso, <code class="docutils literal notranslate"><span class="pre">1000</span></code>) e usa quel numero nel <i>corpo</i> della funzione.<br />
+Facciamo il caso specifico della prima funzione: quando chiamiamo <code class="docutils literal notranslate"><span class="pre">sum_first_N_numbers(1000)</span></code>, dobbiamo pensare di definire <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">1000</span></code> e poi entrare nel corpo della prima funzione, ovvero eseguire l’istruzione <code class="docutils literal notranslate"><span class="pre">N*(N+1)÷2</span></code><br />
+Per la seconda funzione, <code class="docutils literal notranslate"><span class="pre">sum_first_N_numbers_loop</span></code>, vale esattamente lo stesso discorso.</p>
+<div class="section" id="quello-che-possiamo-fare-a-questo-punto-e-richiamare-le-funzioni-su-diversi-valori-e-ottenere-senza-dover-riscrivere-l-intero-codice-il-risultato-corrispondente">
+<h3>Quello che possiamo fare, a questo punto, è richiamare le funzioni su diversi valori e ottenere, senza dover riscrivere l’intero codice, il risultato corrispondente:<a class="headerlink" href="#quello-che-possiamo-fare-a-questo-punto-e-richiamare-le-funzioni-su-diversi-valori-e-ottenere-senza-dover-riscrivere-l-intero-codice-il-risultato-corrispondente" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum_first_N_numbers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum_first_N_numbers_loop</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum_first_N_numbers</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50005000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum_first_N_numbers_loop</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50005000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum_first_N_numbers</span><span class="p">(</span><span class="mi">432</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93528
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">sum_first_N_numbers</span><span class="p">(</span><span class="mi">432</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93528
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="e-la-nostra-pigrizia-e-stata-soddisfatta">
+<h2>E la nostra pigrizia è stata soddisfatta<a class="headerlink" href="#e-la-nostra-pigrizia-e-stata-soddisfatta" title="Permalink to this headline">¶</a></h2>
+<p>Ora possiamo riparlare di <code class="docutils literal notranslate"><span class="pre">println</span></code>.
+<code class="docutils literal notranslate"><span class="pre">println</span></code> altro non è che una funzione, presente di default, che permette di stampare l’argomento passato.
+A voler essere precisə, in Julia <strong><font color="red">tutto</font></strong> è una funzione, ma non staremo qui a parlare di functional programming vs declarative programming e tutte queste pippe per nerdoni. Chi fosse interessatə, può trovare una spiegazione <a class="reference external" href="https://en.wikipedia.org/wiki/Functional_programming">qui</a></p>
+</div>
+<div class="section" id="e-questo-conclude-la-nostra-introduzione-alla-programmazione">
+<h2>E questo conclude la nostra introduzione alla programmazione.<a class="headerlink" href="#e-questo-conclude-la-nostra-introduzione-alla-programmazione" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ci-sono-molti-altri-concetti-che-si-serviranno-lungo-il-percorso-ma-credo-sia-meglio-introdurli-via-via-quando-ci-serviranno">
+<h3>Ci sono molti altri concetti che si serviranno lungo il percorso, ma credo sia meglio introdurli via via quando ci serviranno.<a class="headerlink" href="#ci-sono-molti-altri-concetti-che-si-serviranno-lungo-il-percorso-ma-credo-sia-meglio-introdurli-via-via-quando-ci-serviranno" title="Permalink to this headline">¶</a></h3>
+<p>Alla prossima!</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.7"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.7",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.7'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Benenutə, questo è il libro online di Xenolearning</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Intro_to_ML.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Episodio 1: intro to Machine Learning (ML)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Egolep<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
